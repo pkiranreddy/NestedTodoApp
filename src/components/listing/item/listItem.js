@@ -52,7 +52,7 @@ export const ListItem = ({ item, list, header, index, branch, filter }) => {
 
   return (
     boolean && (
-      <div className="item-container">
+      <div className="item-container ">
         <div className="d-flex justify-content-between mb-1">
           <div className="filter1">{item.filter}</div>
           <div className="mr-1">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { List } from "./listing/listing/listing";
 import SearchIcon from "@material-ui/icons/Search";
@@ -7,13 +7,21 @@ import CalendarTodayOutlinedIcon from "@material-ui/icons/CalendarTodayOutlined"
 export const TaskDetails = ({ todo, progress, done, dispatch, filter }) => {
   let date = new Date();
   let history = useHistory();
-
+  let [search, setSearch] = useState("");
+  useEffect(() => {
+    setSearch(search);
+  }, [search]);
   return (
     <>
       <div className="header d-flex w-100 justify-content-between">
         <div className="dummyInputContainer">
           <SearchIcon color="disabled" />
-          <input placeholder="Search Tasks by Title" className="dummyInput" />
+          <input
+            placeholder="Search Tasks by Title"
+            className="dummyInput"
+            onChange={e => setSearch(e.target.value)}
+            value={search}
+          />
         </div>
         <div
           className="create"
@@ -36,6 +44,7 @@ export const TaskDetails = ({ todo, progress, done, dispatch, filter }) => {
             color="black"
             dispatch={dispatch}
             filter={filter}
+            search={search}
           />
         </div>
         <div className="task-field">
@@ -47,6 +56,7 @@ export const TaskDetails = ({ todo, progress, done, dispatch, filter }) => {
             color="white"
             dispatch={dispatch}
             filter={filter}
+            search={search}
           />
         </div>
         <div className="task-field">
@@ -58,6 +68,7 @@ export const TaskDetails = ({ todo, progress, done, dispatch, filter }) => {
             color="white"
             dispatch={dispatch}
             filter={filter}
+            search={search}
           />
         </div>
       </div>
