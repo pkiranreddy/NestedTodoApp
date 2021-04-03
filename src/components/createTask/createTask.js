@@ -138,7 +138,7 @@ export const CreateTask = ({ dispatch, action, todo, progress, done }) => {
               className="create"
               onClick={() => (action === "Create" ? AddTask() : EditTask())}
             >
-              {action}
+              Create
             </div>
           </div>
         </>
