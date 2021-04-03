@@ -32,14 +32,18 @@ const Dropdown = ({ index, list, branch }) => {
       <DropdownToggle className="toggle">
         <MoreVertIcon style={{ color: "black" }} />
       </DropdownToggle>
-      <DropdownMenu right>
+      <DropdownMenu right className="m-0 p-0 ">
         <DropdownItem onClick={e => handleEdit(e)}>
-          <EditOutlinedIcon color="disabled" /> Edit
+          <EditOutlinedIcon color="disabled" style={{ marginRight: "8px" }} />
+          <span className="text-dark">Edit</span>
         </DropdownItem>
-        <DropdownItem divider />
-        <DropdownItem onClick={e => handleDelete(e)}>
-          <DeleteOutlineIcon color="disabled" />
-          Delete
+
+        <DropdownItem
+          onClick={e => handleDelete(e)}
+          className="text-dark border-top"
+        >
+          <DeleteOutlineIcon color="disabled" style={{ marginRight: "8px" }} />
+          <span className="text-dark">Delete</span>
         </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>

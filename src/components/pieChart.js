@@ -6,6 +6,7 @@ import CallMadeIcon from "@material-ui/icons/CallMade";
 
 export const PieCharts = ({ width }) => {
   const [{ todo, progress, done }] = useTodoState();
+  let All = [...todo, ...progress, ...done];
   const history = useHistory();
   const data01 = [
     {
@@ -43,13 +44,19 @@ export const PieCharts = ({ width }) => {
         </div>
       )}
       <div className="d-flex justify-content-center align-items-center">
-        <PieChart width={width} height={width}>
-          <Pie data={data01} dataKey="value" nameKey="name">
-            {data01.map((entry, index) => (
-              <Cell fill={entry.color} key={entry.name} />
-            ))}
-          </Pie>
-        </PieChart>
+        {All.length !== 0 ? (
+          <PieChart width={width} height={width}>
+            <Pie data={data01} dataKey="value" nameKey="name">
+              {data01.map((entry, index) => (
+                <Cell fill={entry.color} key={entry.name} />
+              ))}
+            </Pie>
+          </PieChart>
+        ) : (
+          <div className="mt-4 mb-4 font-weight-bold text-danger">
+            No Tasks Present
+          </div>
+        )}
       </div>
 
       <div className="d-flex justify-content-between flex-column ">
