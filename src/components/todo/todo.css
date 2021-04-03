@@ -95,7 +95,13 @@
   padding: 6px;
   border-radius: 6px;
 }
-
+.Title {
+  border: 0;
+  outline: 0;
+  background-color: rgb(242, 242, 242);
+  width: 80%;
+  padding: 8px;
+}
 @media only screen and (max-width: 940px) {
   .dummyInputContainer {
     width: 55%;

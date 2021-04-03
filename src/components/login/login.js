@@ -45,19 +45,19 @@ export const Login = () => {
       </div>
       <div className="login p-0 m-0 d-flex justify-content-center align-items-center flex-column">
         <h1>To- Do App</h1>
-        <div className=" input-container d-flex m-3 p-2 w-70">
-          <EmailOutlinedIcon color="disabled" />
+        <div className=" input-container d-flex m-3 p-1 w-70">
+          <EmailOutlinedIcon color="disabled" className="align-self-center" />
           <input
             type="email"
             placeholder="Email ID"
             required={true}
             value={email}
             onChange={e => setEmail(e.target.value)}
-            className="ml-2 input flex-grow-1"
+            className="ml-2 input flex-grow-1 Title"
           />
         </div>
-        <div className="m-3 p-2 input-container w-70 d-flex">
-          <LockOutlinedIcon color="disabled" />
+        <div className="m-3 p-1 input-container w-70 d-flex">
+          <LockOutlinedIcon color="disabled" className="align-self-center" />
           <input
             type="password"
             ref={passwordRef}
@@ -65,7 +65,7 @@ export const Login = () => {
             required={true}
             value={password}
             onChange={e => setPassword(e.target.value)}
-            className="input flex-grow-1"
+            className="input flex-grow-1 Title"
             id="myInput"
           />
           {!visible ? (
@@ -73,12 +73,14 @@ export const Login = () => {
               color="disabled"
               onClick={toggle}
               style={{ cursor: "pointer" }}
+              className="align-self-center"
             />
           ) : (
             <VisibilityOutlinedIcon
               color="disabled"
               onClick={toggle}
               style={{ cursor: "pointer" }}
+              className="align-self-center"
             />
           )}
         </div>

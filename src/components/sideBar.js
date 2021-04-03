@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SettingsPowerIcon from "@material-ui/icons/SettingsPower";
 import { Avatar } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
@@ -50,18 +50,14 @@ export const SideBar = ({ todo, progress, done, filter, setFilter }) => {
       <div className="logout">
         <div className="flex-grow-1">
           {size.width > 784 ? (
-            <img src="./small.png" alt="" />
+            <img src="./small.png" alt="" className="mt-2" />
           ) : (
             <Avatar
-              className="mt-1 ml-1 p-1"
-              style={{
-                color: "white",
-                backgroundColor: "blue",
-                marginLeft: "10px"
-              }}
-            >
-              K
-            </Avatar>
+              alt="Kiran Reddy"
+              src="../avatar.jpeg"
+              className="mt-1"
+              style={{ marginLeft: "12px" }}
+            />
           )}
         </div>
         <div className="powerButton" onClick={() => history.replace("/login")}>
@@ -72,11 +68,9 @@ export const SideBar = ({ todo, progress, done, filter, setFilter }) => {
 
       {/* Filter*/}
       <div className="filter mt-2">
-        <div className="info d-flex justify-content-around mt-2 p-1">
-          <div>
-            <Avatar style={{ color: "white", backgroundColor: "blue" }}>
-              K
-            </Avatar>
+        <div className="info d-flex justify-content-center mt-2 p-1">
+          <div style={{ marginRight: "5px" }}>
+            <Avatar alt="Kiran Reddy" src="../avatar.jpeg" />
           </div>
           <div>
             <div>Kiran Reddy</div>

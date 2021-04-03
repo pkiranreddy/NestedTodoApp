@@ -67,7 +67,12 @@ export const ListItem = ({ item, list, header, index, branch, filter }) => {
         </div>
         <div className="title m-1 d-flex justify-content-between">
           <div>{item.name}</div>
-          <div className="description ">{date}</div>
+          <div
+            className="description flex-end"
+            style={{ minWidth: "50px", marginLeft: "3px" }}
+          >
+            {date}
+          </div>
         </div>
         <div className="description m-1">{item.description}</div>
         {item?.subTasks?.map(item => (
