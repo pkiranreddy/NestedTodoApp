@@ -32,7 +32,7 @@
   cursor: pointer;
 }
 .filter {
-  width: 85%;
+  width: 100%;
   /* height: 100vh;*/
 }
 /*side-bar*/
@@ -149,12 +149,13 @@
     margin-bottom: 15px;
   }
   .dummyInputContainer {
-    width: fit-content;
+    width: 80%;
   }
   .date {
     display: none;
   }
   .powerButton {
     margin: auto;
+    margin-right: 10px;
   }
 }

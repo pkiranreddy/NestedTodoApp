@@ -33,9 +33,10 @@
   width: 70%;
 }
 
-@media only screen and (max-width: 727px) {
+@media only screen and (max-width: 786px) {
   .container {
     display: block;
+    overflow: auto;
   }
   .image {
     width: 100%;

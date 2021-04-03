@@ -54,7 +54,11 @@ export const SideBar = ({ todo, progress, done, filter, setFilter }) => {
           ) : (
             <Avatar
               className="mt-1 ml-1 p-1"
-              style={{ color: "white", backgroundColor: "blue" }}
+              style={{
+                color: "white",
+                backgroundColor: "blue",
+                marginLeft: "10px"
+              }}
             >
               K
             </Avatar>
@@ -80,7 +84,7 @@ export const SideBar = ({ todo, progress, done, filter, setFilter }) => {
           </div>
         </div>
         <div
-          className="mt-4 p-2 d-flex justify-content-around flex-wrap"
+          className="mt-4 p-2 d-flex justify-content-around flex-wrap "
           style={{ backgroundColor: "rgb(242, 242, 242)" }}
         >
           <Filter

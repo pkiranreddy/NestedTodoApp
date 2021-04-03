@@ -15,10 +15,10 @@ export const TaskDetails = ({ todo, progress, done, dispatch, filter }) => {
     <>
       <div className="header d-flex w-100 justify-content-between">
         <div className="dummyInputContainer">
-          <SearchIcon color="disabled" />
+          <SearchIcon color="disabled" style={{ marginTop: "6px" }} />
           <input
             placeholder="Search Tasks by Title"
-            className="dummyInput"
+            className="dummyInput form-control"
             onChange={e => setSearch(e.target.value)}
             value={search}
           />

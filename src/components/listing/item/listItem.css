@@ -12,6 +12,15 @@
   padding: 0px 5px 0px 5px;
   border-radius: 2px;
 }
+.Personal {
+  background-color: rgb(69, 162, 79) !important;
+}
+.Official {
+  background-color: rgb(158, 112, 224);
+}
+.Misc {
+  background-color: rgb(242, 153, 74);
+}
 
 .title {
   font-weight: normal;

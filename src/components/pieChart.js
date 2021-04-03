@@ -11,17 +11,17 @@ export const PieCharts = ({ width }) => {
     {
       name: "To-Do",
       value: todo.length,
-      color: "yellow"
+      color: "rgb(242,201,76)"
     },
     {
       name: "Progress",
       value: progress.length,
-      color: "green"
+      color: "rgb(74,174,96)"
     },
     {
       name: "Done",
       value: done.length,
-      color: "blue"
+      color: "rgb(47,128,237)"
     }
   ];
   return (
@@ -57,14 +57,14 @@ export const PieCharts = ({ width }) => {
           <div className="d-flex ">
             <div
               className="circle "
-              style={{ backgroundColor: "yellow", marginRight: "6px" }}
+              style={{ backgroundColor: "rgb(242,201,76)", marginRight: "6px" }}
             ></div>
             <div>To-Do</div>
           </div>
           <div className="d-flex ">
             <div
               className="circle "
-              style={{ backgroundColor: "green", marginRight: "6px" }}
+              style={{ backgroundColor: "rgb(74,174,96)", marginRight: "6px" }}
             ></div>
             <div>In-Progress</div>
           </div>
@@ -72,16 +72,10 @@ export const PieCharts = ({ width }) => {
         <div className="d-flex justify-content-center">
           <div
             className="circle "
-            style={{ backgroundColor: "blue", marginRight: "6px" }}
+            style={{ backgroundColor: "rgb(47,128,237)", marginRight: "6px" }}
           ></div>
           <div>Done</div>
         </div>
-        {/* <div className="circle " style={{ backgroundColor: "yellow" }}></div>
-        <div>To-Do</div>
-        <div className="circle " style={{ backgroundColor: "green" }}></div>
-        <div>In-Progress</div>
-        <div className="circle " style={{ backgroundColor: "blue" }}></div>
-        <div>Done</div> */}
       </div>
     </div>
   );
