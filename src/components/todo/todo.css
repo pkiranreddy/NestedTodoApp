@@ -1,0 +1,159 @@
+.container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh !important;
+}
+/*side-bar*/
+.side-bar {
+  display: flex;
+  width: 300px;
+  /*min-height: 100vh;*/
+  border-right: 1px solid rgb(84, 193, 97);
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+}
+.logout {
+  width: 50px;
+  /* height: 100vh;*/
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(59, 62, 65);
+}
+.powerButton {
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.filter {
+  width: 85%;
+  /* height: 100vh;*/
+}
+/*side-bar*/
+.main-bar {
+  width: 80%;
+  padding: 10px;
+}
+
+.tasks {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+.task-field {
+  width: 30%;
+  background-color: rgb(248, 248, 249);
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 5px;
+  /* height: fit-content;*/
+}
+.dummyInputContainer {
+  background-color: rgb(242, 242, 242);
+  width: 65%;
+  display: flex;
+  padding: 6px 10px;
+  border-radius: 20px;
+  margin-left: 12px;
+}
+.dummyInput {
+  border: 0;
+  outline: 0;
+  margin-left: 10px;
+  background-color: rgb(242, 242, 242);
+}
+.addBorder {
+  border: 1px solid black;
+  padding: 1px;
+  margin: 0;
+  background-color: white;
+  border-radius: 5px;
+}
+.create {
+  color: white;
+  background-color: rgb(84, 193, 97);
+  border-radius: 5px;
+  height: fit-content;
+  padding: 6px;
+  text-align: center;
+  font-weight: lighter;
+  font-size: smaller;
+  cursor: pointer;
+}
+.date {
+  margin-right: 5px;
+  background-color: rgb(242, 242, 242);
+  font-weight: light;
+  height: fit-content;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+@media only screen and (max-width: 940px) {
+  .dummyInputContainer {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 855px) {
+  .dummyInputContainer {
+    width: 60%;
+  }
+  .date {
+    display: none;
+  }
+}
+@media only screen and (max-width: 855px) {
+  .dummyInputContainer {
+    width: fit-content;
+  }
+}
+
+@media only screen and (max-width: 784px) {
+  .container {
+    display: block;
+  }
+  .info {
+    display: none !important;
+  }
+  .side-bar {
+    display: block;
+    height: fit-content;
+    width: 100%;
+  }
+  .logout {
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    color: white;
+  }
+  .filter {
+    height: fit-content;
+  }
+  .main-bar {
+    width: 100%;
+    padding: 10px;
+  }
+  .tasks {
+    width: 100%;
+    display: block;
+  }
+  .task-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .dummyInputContainer {
+    width: fit-content;
+  }
+  .date {
+    display: none;
+  }
+  .powerButton {
+    margin: auto;
+  }
+}

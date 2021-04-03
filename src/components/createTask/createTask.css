@@ -1,0 +1,100 @@
+.create-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.create-header {
+  display: flex;
+  height: 12vh;
+  border-bottom: 1px solid lightgray;
+  align-items: center;
+  font-size: larger;
+}
+
+.container-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.create-body {
+  width: 100%;
+  display: flex;
+}
+.left {
+  padding: 10px;
+  width: 50%;
+  font-size: small;
+  color: gray;
+}
+.right {
+  padding: 10px;
+  width: 50%;
+  font-size: small;
+  color: gray;
+}
+.field {
+  margin: 20px;
+}
+
+.Title {
+  border: 0;
+  outline: 0;
+  background-color: rgb(242, 242, 242);
+  width: 80%;
+  padding: 8px;
+}
+
+.input-group {
+  cursor: pointer;
+}
+.input-group-text {
+  font-size: small;
+  color: gray;
+}
+
+.subtask {
+  border-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(240, 240, 240);
+  color: gray;
+}
+.subtask-input {
+  outline: 0;
+  padding: 5px;
+  border: 1px solid lightgreen;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.button {
+  font-size: 800;
+  color: rgb(47, 128, 237);
+}
+
+.create {
+  margin: 5px;
+}
+.cancel {
+  background-color: lightgray;
+  color: black;
+}
+
+.selected {
+  background-color: lightgreen !important;
+}
+
+@media only screen and (max-width: 880px) {
+  .create-body {
+    display: block;
+  }
+  .left {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+  }
+}

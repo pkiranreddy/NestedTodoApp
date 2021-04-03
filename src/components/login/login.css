@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  min-width: 100%;
+  min-height: 100%;
+}
+.input-container {
+  background-color: rgb(242, 242, 242);
+  border-radius: 2px;
+}
+.input {
+  border: none;
+  outline: none;
+  background-color: rgb(242, 242, 242);
+  margin-left: 3px;
+  max-width: 80%;
+}
+.image {
+  width: 60%;
+  height: 100vh;
+  background-color: rgb(84, 193, 97);
+}
+.img {
+  width: 50%;
+  height: 30%;
+  background-color: rgb(84, 193, 97);
+}
+.login {
+  width: 40%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+.w-70 {
+  width: 70%;
+}
+
+@media only screen and (max-width: 727px) {
+  .container {
+    display: block;
+  }
+  .image {
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(84, 193, 97);
+  }
+  .login {
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+  }
+}
