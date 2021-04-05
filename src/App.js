@@ -46,7 +46,7 @@ const App = () => {
           <PublicRoute exact path="/login" component={Login} />
           <PrivateRoute exact path="/todo" component={Todo} />
           <PrivateRoute exact path="/todo/create" component={Todo} />
-          <PrivateRoute exact path="/todo/edit/:id" component={Todo} />
+          <PrivateRoute exact path="/todo/edit/:branch/:id" component={Todo} />
           <PrivateRoute exact path="/todo/analysis" component={Todo} />
         </Switch>
       </Router>
