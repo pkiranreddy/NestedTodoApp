@@ -22,7 +22,10 @@ export const Login = () => {
     fetch("https://reqres.in/api/login", requestOptions)
       .then(response => response.json())
       .then(data => {
-        !data.error ? history.replace("/todo") : alert("invalid user");
+        if (!data.error) {
+          localStorage.setItem("authenticate", JSON.stringify(true));
+          window.location.href = "/todo";
+        } else alert("invalid user");
         setPassword("");
         setEmail("");
       });

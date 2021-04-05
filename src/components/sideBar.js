@@ -60,7 +60,13 @@ export const SideBar = ({ todo, progress, done, filter, setFilter }) => {
             />
           )}
         </div>
-        <div className="powerButton" onClick={() => history.replace("/login")}>
+        <div
+          className="powerButton"
+          onClick={() => {
+            localStorage.setItem("authenticate", JSON.stringify(false));
+            history.replace("/login");
+          }}
+        >
           <SettingsPowerIcon style={{ color: "white" }} />
         </div>
       </div>
